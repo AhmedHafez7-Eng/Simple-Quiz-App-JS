@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Quiz App</title>
+    <link rel="shortcut icon"
+        href="https://play-lh.googleusercontent.com/nEkaONSbM77kYNP6MxP_dl5_8qmOA0IX8FNLI9HlR0jdn5uW7on44GK2xgAZhkuoFqQ"
+        type="image/x-icon">
+
+    <!-- ================= FontAwesome 6 ================= -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!-- ================= Style Files ================= -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <div class="startBtn">
+        <button>Start Quiz</button>
+    </div>
+
+    <!-- Info Box -->
+    <div class="infoBox">
+        <div class="infoTitle">
+            <span>Some Rules of this Quiz</span>
+        </div>
+        <div class="infoList">
+            <div class="info">
+                1. You'll have only <span>15 seconds</span> per each question.
+            </div>
+            <div class="info">
+                2. Once you select an answer, you can't change it.
+            </div>
+            <div class="info">
+                3. You can't select any answer once time goes off.
+            </div>
+            <div class="info">
+                4. You can't exit from the quiz while you're playing.
+            </div>
+            <div class="info">
+                5. You'll get points on the basis of your correct answers.
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="quit">Exit Quiz</button>
+            <button class="restart">Continue</button>
+        </div>
+    </div>
+
+    <!-- Quiz Box -->
+    <div class="quizBox">
+        <header>
+            <div class="title">
+                Simple Quiz Application
+            </div>
+            <div class="timer">
+                <div class="timerText">Time Left :</div>
+                <div class="timerSec"></div>
+            </div>
+            <div class="timeLine"></div>
+        </header>
+        <section>
+            <div class="queText">
+                <!-- <span>Question 1</span> -->
+                <!-- <span>What does HTML stand for?</span> -->
+            </div>
+            <div class="optionList">
+                <!-- <div class="option">
+                    <span>Hypertext Preprocessor</span>
+                    <div class="icon tick"><i class="fas fa-check"></i></div>
+                </div>
+                <div class="option">
+                    <span>Hypertext Markup Language</span>
+                    <div class="icon cross"><i class="fas fa-times"></i></div>
+                </div>
+                <div class="option">
+                    <span>Hypertext Multiple Language</span>
+                </div>
+                <div class="option">
+                    <span>Hyper Tool Multi Language</span>
+                </div> -->
+            </div>
+        </section>
+
+        <!-- Quiz Box Footer -->
+        <footer>
+            <div class="totalQue">
+                <!-- <span>
+                    <p>2</p> Of <p>5</p> Questions
+                </span> -->
+            </div>
+            <button class="nextBtn">Next Question</button>
+        </footer>
+    </div>
+
+    <!-- ================= Result Box ================= -->
+
+    <div class="resultBox">
+        <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="completeText">
+            You've Completed the Quiz!
+        </div>
+        <div class="scoreText">
+            <!-- <span>and sorry, you've got only <p>2</p> out of <p>5</p></span> -->
+        </div>
+        <div class="buttons">
+            <button class="restart">Replay Quiz</button>
+            <button class="quit">Quit Quiz</button>
+        </div>
+    </div>
+
+    <!-- ================= Footer ================= -->
+    <footer class="footer">
+        <p>Developed By Ahmed Hafez - Copyrights 2022 &copy;</p>
+    </footer>
+
+    <!-- =============== Scripts ================= -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
+        integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/questions.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
