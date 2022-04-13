@@ -1,3 +1,19 @@
+
+// var category = 'music';
+// $.ajax({
+//     method: 'GET',
+//     url: 'https://api.api-ninjas.com/v1/trivia?category=' + category,
+//     headers: { 'X-Api-Key': 'YOUR_API_KEY' },
+//     contentType: 'application/json',
+//     success: function (result) {
+//         console.log(result);
+//     },
+//     error: function ajaxError(jqXHR) {
+//         console.error('Error: ', jqXHR.responseText);
+//     }
+// });
+
+
 // ============== Getting All Required Elements =====================
 
 const startBtn = document.querySelector('.startBtn button');
@@ -17,12 +33,14 @@ const scoreText = document.querySelector('.scoreText');
 // ============== When Start Quiz Button Clicked =====================
 startBtn.onclick = () => {
     infoBox.classList.add('activeInfo');  // Show Info Box
+    startBtn.style.display = 'none';  // Hide Start Button
 }
 
 // ============== When Exit Quiz Button Clicked =====================
 
 exitBtn.onclick = () => {
     infoBox.classList.remove('activeInfo');  // Hide Info Box
+    startBtn.style.display = 'block';  // Show Start Button
 }
 
 // ============== When Continue Quiz Button Clicked =====================
@@ -30,6 +48,7 @@ exitBtn.onclick = () => {
 continueBtn.onclick = () => {
     infoBox.classList.remove('activeInfo');  // Hide Info Box
     quizBox.classList.add('activeQuiz');  // Show Quiz Box
+    document.querySelector('footer.footer').style.position = 'relative';
     timeCount.textContent = questions[0].quesTime;
     showQuestions(0);
     startTimer(questions[0].quesTime);
