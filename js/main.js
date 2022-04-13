@@ -188,11 +188,11 @@ quitQuiz.onclick = () => {
 }
 
 restartQuiz.onclick = () => {
-    let quesCount = 0;
-    let widthValue = 0;
-    let userScore = 0;
-    quizBox.classList.add('activeQuiz'); // Show Quiz Box
+    quesCount = 0;
+    widthValue = 0;
+    userScore = 0;
     resultBox.classList.remove('activeResult'); // Hide Result Box
+    quizBox.classList.add('activeQuiz'); // Show Quiz Box
     showQuestions(quesCount);
     clearInterval(timeCounter);
     startTimer(questions[quesCount].quesTime);
